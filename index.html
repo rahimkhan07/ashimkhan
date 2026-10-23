@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashim Khan | Java Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"    class="nav-link">Home</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#skills"  class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education"  class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> Available for opportunities
+      </div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="highlight">Ashim Khan</span>
+      </h1>
+      <h2 class="hero-subtitle">
+        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-desc">
+        Java Developer passionate about building secure, scalable backend systems.
+        Currently building payment infrastructure at <strong>Hulk Hire Tech</strong> using
+        Spring Boot, Microservices &amp; AWS.
+      </p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="mailto:ashimkhan241@gmail.com" aria-label="Email" class="social-icon">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-filename">PaymentService.java</span>
+        </div>
+        <pre class="code-body"><code><span class="kw">@Service</span>
+<span class="kw">public class</span> <span class="cls">PaymentService</span> {
+
+  <span class="kw">@Autowired</span>
+  <span class="kw">private</span> <span class="cls">PaymentValidator</span> validator;
+
+  <span class="kw">public</span> <span class="cls">PaymentResponse</span> process(
+      <span class="cls">PaymentRequest</span> req) {
+
+    validator.validate(req);
+    <span class="cmt">// HMAC-SHA256 secured</span>
+    <span class="kw">return</span> gateway.charge(req);
+  }
+}</code></pre>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar-wrap">
+          <div class="about-avatar">
+            <div class="avatar-initials">AK</div>
+          </div>
+          <div class="about-location">
+            <i class="fas fa-map-marker-alt"></i> New Delhi – 110025, India
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            I'm a <strong>Java Backend Developer</strong> with a B.Tech in Computer Science from
+            Integral University, Lucknow. I specialise in designing and building
+            high-performance, secure backend systems using <strong>Java</strong>,
+            <strong>Spring Boot</strong>, and <strong>Microservices</strong>.
+          </p>
+          <p>
+            Currently, as a <strong>Java Developer Intern at Hulk Hire Tech</strong>, I'm engineering
+            a core payment integration system for an e-commerce client — handling everything from
+            payment validation pipelines and duplicate-detection logic to cloud deployment on AWS.
+          </p>
+          <p>
+            I thrive in Agile environments and love tackling complex backend challenges:
+            transaction security, scalable service design, and clean API architecture.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Payment Reliability</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">AWS Services Used</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Tech Stack Depth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I work with</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fab fa-java"></i></div>
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Java</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Frameworks</h3>
+          <div class="skill-tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Spring Security</span>
+            <span class="tag">Spring Boot JDBC</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fas fa-cubes"></i></div>
+          <h3>Architecture</h3>
+          <div class="skill-tags">
+            <span class="tag">Microservices</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Design Patterns</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fas fa-database"></i></div>
+          <h3>Databases</h3>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">AWS RDS</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fab fa-aws"></i></div>
+          <h3>Cloud (AWS)</h3>
+          <div class="skill-tags">
+            <span class="tag">EC2</span>
+            <span class="tag">RDS</span>
+            <span class="tag">Secrets Manager</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Security</h3>
+          <div class="skill-tags">
+            <span class="tag">HMAC-SHA256</span>
+            <span class="tag">Spring Security</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
+          <h3>Dev Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Maven</span>
+            <span class="tag">Git</span>
+            <span class="tag">Bitbucket</span>
+            <span class="tag">Postman</span>
+            <span class="tag">Eclipse</span>
+            <span class="tag">DBEaver</span>
+            <span class="tag">Tomcat</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fas fa-vial"></i></div>
+          <h3>Testing & Quality</h3>
+          <div class="skill-tags">
+            <span class="tag">JUnit</span>
+            <span class="tag">Mockito</span>
+            <span class="tag">SonarLint</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-icon"><i class="fas fa-tasks"></i></div>
+          <h3>Project Management</h3>
+          <div class="skill-tags">
+            <span class="tag">Jira</span>
+            <span class="tag">Agile / Scrum</span>
+            <span class="tag">GSON</span>
+            <span class="tag">Lombok</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Where I've worked</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3 class="job-title">Java Developer Intern</h3>
+                <span class="company">Hulk Hire Tech</span>
+              </div>
+              <div class="job-meta">
+                <span class="job-type">Remote</span>
+                <span class="job-date"><i class="fas fa-calendar-alt"></i> Nov 2024 – Present</span>
+                <span class="job-location"><i class="fas fa-map-marker-alt"></i> Hyderabad, India</span>
+              </div>
+            </div>
+            <div class="project-name">
+              <i class="fas fa-project-diagram"></i> Core Payment Integration System
+            </div>
+            <ul class="timeline-list">
+              <li>Developed a <strong>secure and scalable payment system</strong> for an e-commerce client handling end-to-end payment flows.</li>
+              <li>Built core <strong>Payment Validation & Payment Processing</strong> pipelines using <strong>Spring Boot</strong> with Microservices architecture, hosted on <strong>AWS</strong>.</li>
+              <li>Worked in an <strong>Agile team</strong> to design and develop a <strong>Validation Framework</strong> with a robust end-to-end error handling system.</li>
+              <li>Ensured <strong>100% payment reliability</strong> by implementing a real-time tracking system.</li>
+              <li>Designed <strong>Payment Status Management</strong>, built <strong>REST APIs</strong>, and applied <strong>Spring Boot JDBC</strong> with MySQL.</li>
+              <li>Implemented key business validations like <strong>Duplicate Processing Prevention</strong> &amp; <strong>Payment Attempt Limits</strong>.</li>
+              <li>Secured transactions using <strong>HMAC-SHA256</strong> and integrated <strong>Spring Security</strong>.</li>
+              <li>Utilised <strong>AWS services</strong> (EC2, RDS, Secrets Manager) for cloud deployment and secret management.</li>
+            </ul>
+            <div class="tech-stack">
+              <span class="tech-chip">Java</span>
+              <span class="tech-chip">Spring Boot</span>
+              <span class="tech-chip">Microservices</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip">AWS EC2</span>
+              <span class="tech-chip">AWS RDS</span>
+              <span class="tech-chip">Spring Security</span>
+              <span class="tech-chip">HMAC-SHA256</span>
+              <span class="tech-chip">REST API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic background</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-info">
+            <h3>B.Tech – Computer Science & Engineering</h3>
+            <span class="edu-uni">Integral University, Lucknow (U.P)</span>
+            <span class="edu-year">2021 – 2024</span>
+          </div>
+          <div class="edu-badge">B.Tech</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <div class="edu-info">
+            <h3>Diploma – Computer Science & Engineering</h3>
+            <span class="edu-uni">Integral University, Lucknow (U.P)</span>
+            <span class="edu-year">2018 – 2021</span>
+          </div>
+          <div class="edu-badge">Diploma</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section class="section achievements" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Beyond the code</span>
+        <h2 class="section-title">Co-Curricular & Achievements</h2>
+      </div>
+      <div class="achieve-grid">
+        <div class="achieve-card reveal">
+          <div class="achieve-icon"><i class="fas fa-award"></i></div>
+          <div class="achieve-content">
+            <h3>Chief Coordinator – FIESTA 2024</h3>
+            <p>
+              Managed college cultural events 'FIESTA-2024' as Chief Coordinator, leading 25+ DAF
+              (Discipline Action Force) volunteers while welcoming Hon. Defence Minister
+              <strong>Mr. Raj Nath Singh</strong>. Delivered 100% management completion and was
+              awarded by Hon. Vice Chancellor Syed Waseem Akhtar Sir.
+            </p>
+          </div>
+        </div>
+        <div class="achieve-card reveal">
+          <div class="achieve-icon"><i class="fas fa-volleyball-ball"></i></div>
+          <div class="achieve-content">
+            <h3>Vice Captain – Departmental Volleyball Team</h3>
+            <p>
+              Led the departmental volleyball team as Vice Captain, representing the department
+              in university-level inter-departmental matches.
+            </p>
+          </div>
+        </div>
+        <div class="achieve-card reveal">
+          <div class="achieve-icon"><i class="fab fa-bitcoin"></i></div>
+          <div class="achieve-content">
+            <h3>4th Rank – PPT Competition on Bitcoin</h3>
+            <p>
+              Secured 4th rank on the topic <strong>'Bitcoin'</strong> in an Inter-departmental
+              PowerPoint Presentation Competition on Excel, organized by the Department of
+              Computer Science & Engineering.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-sub">
+          I'm open to new opportunities, collaborations, or just a good tech conversation.
+          Feel free to reach out!
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:ashimkhan241@gmail.com" class="contact-value">ashimkhan241@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+917318243241" class="contact-value">+91 73182 43241</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">New Delhi – 110025, India</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="c-social-btn">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="c-social-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Collaboration" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-feedback" id="formFeedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="nav-logo footer-logo">
+          <span class="logo-bracket">&lt;</span>AK<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-copy">
+          &copy; 2024 Ashim Khan. Built with passion &amp; Java ☕
+        </p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
